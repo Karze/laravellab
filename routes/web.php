@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hello', function () {
+   return "hello my laravel";
+});
+
+Route::get('/date', function () {
+    return date("Y-m-d H:i:s", time());
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
